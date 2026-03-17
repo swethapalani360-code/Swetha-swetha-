@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Invitation</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffd1dc, #fff);
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  padding: 50px 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+h1 {
+  font-size: 40px;
+  color: #e91e63;
+  animation: slideUp 2s ease;
+}
+
+h2 {
+  font-size: 28px;
+  color: #444;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #e91e63;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #c2185b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  color: pink;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);}
+  to {transform: translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>A Special Celebration</h2>
+  
+  <h1>Nallappan ❤️ Sharon Keerthana</h1>
+  
+  <p>We’re engaged! Join us in celebrating our love.</p>
+
+  <p><b>March 30th | 2:00 PM</b></p>
+
+  <p>
+    Thittakudi Mariamman Kovil <br>
+    Thirumana Mandapam
+  </p>
+
+  <a class="button" href="https://maps.google.com" target="_blank">
+    📍 View Location
+  </a>
+</div>
+
+<script>
+// Generate floating hearts
+for (let i = 0; i < 20; i++) {
+  let heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.className = "heart";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 10 + "px";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
